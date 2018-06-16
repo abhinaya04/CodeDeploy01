@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      runas: root
+      timeout: 900
+  AfterInstall:
+    - location: scripts/after_install.sh
+      runas: root
+      timeout: 900
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      runas: root
+      timeout: 300
+  ValidateService:
+    - location: scripts/validate_service.sh
+      runas: root
+      timeout: 90
