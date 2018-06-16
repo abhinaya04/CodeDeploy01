@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Starting"
 scriptDir=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 deployDir=$(cd "${scriptDir}" && cd .. && pwd)
 
